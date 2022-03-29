@@ -40,7 +40,7 @@ BIOS configuration
 ----------------------------
 
 Advanced -> Power & Performance
->            CPU Power and Performance Policy : Performance
+>            CPU Power and Performance Policy : Performance (or OS DBPM to set from os)
 Advanced -> Power & Performance -> Uncore Power Management
 >            Uncore Frequency Scaling : Disabled
 >            Performance P-limit : Disabled
