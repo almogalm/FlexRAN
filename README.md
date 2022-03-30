@@ -72,7 +72,8 @@ Edit /etc/tuned/realtime-virtual-host-variables.conf to add isolated_cores=1-19:
 
 >`# isolated_cores=2-23`
 
->`isolated_cores=1-19`
+>~~`isolated_cores=1-19`~~
+>`isolated_cores=9-24`
 
 Core 1-19 are isolated from the host OS and dedicated for real time tasks.
 
@@ -134,7 +135,8 @@ Set CPU Frequency Policy to Performance.
 >`cpupower frequency-set -g performance`
 
 RT Test and Verify the test result
->`cyclictest -m -n -p95 -d0 -a 1-16 -t 16`
+>~~`cyclictest -m -n -p95 -d0 -a 1-16 -t 16`~~
+>`sudo taskset -c 9-24 cyclictest -m -p95 -d0 -a 9-24 -t 16`
 
     /dev/cpu_dma_latency set to 0us
     policy: fifo: loadavg: 0.00 0.01 0.05 1/702 25564
